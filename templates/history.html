@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>History</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #fffde7;
+            padding: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fafafa;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        th {
+            background: #ffd54f;
+        }
+    </style>
+</head>
+<body>
+    <h2>📋 Previous Laptop Price Predictions</h2>
+    <table>
+        <tr>
+            <th>Brand</th><th>Processor Brand</th><th>Processor</th><th>Gen</th>
+            <th>RAM</th><th>SSD</th><th>HDD</th><th>OS</th><th>OS Bit</th><th>GPU</th>
+            <th>Warranty</th><th>Touchscreen</th><th>MS Office</th><th>Rating</th>
+            <th>Ratings Count</th><th>Reviews</th><th>Price</th>
+        </tr>
+        {% for row in history %}
+        <tr>
+            {% for item in row %}
+                <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
